@@ -2,6 +2,7 @@
 
 # Load plugins
 gulp = require("gulp")
+open = require('gulp-open')
 path = require("path")
 sass = require('gulp-sass')
 haml = require('gulp-haml-coffee')
@@ -120,7 +121,7 @@ gulp.task "build", [
   "jquery"
 ]
 
-gulp.task "default", ["connect","watch"], ->
+gulp.task "default", [ "open", "connect","watch"], ->
   gulp.start "build"
   return
 
@@ -130,6 +131,10 @@ gulp.task "connect", connect.server(
   port: 5000
   livereload: true
 )
+
+gulp.task 'open', ->
+  gulp.src(__filename)
+  .pipe(open({uri: 'http://localhost:5000'}))
 
 # Bower helper
 gulp.task "bower", ->
