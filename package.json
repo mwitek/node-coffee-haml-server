@@ -1,0 +1,76 @@
+{
+  "name": "node-coffee-haml-server",
+  "version": "0.0.1",
+  "description": "Boilerplate node app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mwitek/node-coffee-haml-server.git"
+  },
+  "keywords": [
+    "node",
+    "haml",
+    "coffeeScript",
+    "live-reload",
+    "runtime compiling"
+  ],
+  "author": "Matthew Witek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mwitek/node-coffee-haml-server/issues"
+  },
+  "homepage": "https://github.com/mwitek/node-coffee-haml-server#readme",
+  "dependencies": {
+    "blueimp-file-upload": "~9.5.8",
+    "envify": "^1.2.1",
+    "gulp": "^3.9.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-sourcemaps": "~1.1.0",
+    "imagesloaded": "^3.1.8",
+    "react": "^0.11.0",
+    "react-mixin-manager": "~0.5.2",
+    "react-tools": "^0.11.0",
+    "superagent": "~0.18.2",
+    "undo.js": "^0.1.0"
+  },
+  "devDependencies": {
+    "bower": "^1.3.4",
+    "coffee-script": "^1.9.3",
+    "coffeeify": "^0.6.0",
+    "debowerify": "^0.7.1",
+    "gulp": "~3.7.0",
+    "gulp-autoprefixer": "~0.0.6",
+    "gulp-bower": "0.0.3",
+    "gulp-browserify": "~0.4.6",
+    "gulp-bundle": "git+ssh://git@github.com:bleech/gulp-bundle.git",
+    "gulp-cache": "~0.1.1",
+    "gulp-clean": "~0.2.4",
+    "gulp-coffee": "~1.4.1",
+    "gulp-concat": "^2.2.0",
+    "gulp-connect": "~1.0.0",
+    "gulp-haml-coffee": "git+ssh://git@github.com:saschagehlich/gulp-haml-coffee.git",
+    "gulp-hamlc": "git+ssh://git@github.com:smithclay/gulp-hamlc.git",
+    "gulp-jade": "~0.4.2",
+    "gulp-jshint": "~1.4.0",
+    "gulp-less": "^1.2.3",
+    "gulp-livereload": "^3.8.0",
+    "gulp-load-plugins": "~0.3.0",
+    "gulp-react": "~0.2.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.3",
+    "gulp-size": "~0.1.2",
+    "gulp-useref": "^0.4.4",
+    "gulp-util": "~2.2.9",
+    "haml-coffee": "^1.14.1",
+    "less": "~1.7.3",
+    "node-sass": "^0.9.3",
+    "reactify": "~0.10.0",
+    "through2": "latest",
+    "wiredep": "^1.7.3"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
