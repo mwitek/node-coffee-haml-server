@@ -47,10 +47,11 @@ options.sass =
   sourceComments: 'normal'
   sourceMap: 'sass'
 
-gulp.task "sass", ->
+gulp.task "css", ->
   gulp
-    .src("./app/stylesheets/application.scss")
+    .src("./app/stylesheets/**/*.{scss,css}")
     .pipe(sass(options.sass))
+    .pipe($.rename("application.css"))
     .pipe(gulp.dest("dist/stylesheets"))
     .pipe(connect.reload())
     .on "error", $.util.log
@@ -62,11 +63,6 @@ gulp.task "fonts", ->
     .pipe($.flatten())
     .pipe(gulp.dest("dist/fonts"))
     .pipe $.size()
-
-gulp.task "assets", ->
-  gulp
-    .src("app/{api,stylesheets}/**/*.{less,sass,scss,css,json,html,haml,js}")
-    .pipe gulp.dest("dist/")
 
 gulp.task "html", ->
   gulp
@@ -104,10 +100,9 @@ gulp.task "clean", ->
     read: false
   ).pipe $.clean()
 
-gulp.task "styles", ["sass"]
+gulp.task "styles", ["css"]
 
 gulp.task "bundle", [
-  "assets"
   "scripts"
   "styles"
   "bower"
@@ -152,27 +147,20 @@ gulp.task "json", ->
 # Watch
 gulp.task "watch", [
   "images"
-  "assets"
   "html"
   "haml"
+  "css"
   "bundle"
   "connect"
 ], ->
   
-  # Watch .html files
   gulp.watch "app/*.html", ["html"]
   gulp.watch "app/**/*.haml", ["haml"]
-  
-  # Watch .coffeescript files
   gulp.watch "app/scripts/**/*.coffee", ["scripts"]
-  gulp.watch "app/stylesheets/**/*.css", ["assets"]
-  gulp.watch "app/stylesheets/**/*.sass", ["sass"]
-  gulp.watch "app/stylesheets/**/*.scss", ["sass"]
-  
-  # Watch .js files
+  gulp.watch "app/stylesheets/**/*.css", ["css"]
+  gulp.watch "app/stylesheets/**/*.sass", ["css"]
+  gulp.watch "app/stylesheets/**/*.scss", ["css"]
   gulp.watch "app/scripts/**/*.js", ["scripts"]
-  
-  # Watch image files
   gulp.watch "app/images/**/*", ["images"]
   return
 
