@@ -5,6 +5,7 @@ gulp = require("gulp")
 path = require("path")
 sass = require('gulp-sass')
 haml = require('gulp-haml-coffee')
+jquery = require('gulp-jquery')
 livereload = require('gulp-livereload')
 $ = require("gulp-load-plugins")()
 sourcemaps = require("gulp-sourcemaps")
@@ -85,6 +86,11 @@ gulp.task "haml", ->
     .on "error", $.util.log
   return
 
+gulp.task 'jquery', ->
+  jquery.src(
+    release: 2
+  ).pipe gulp.dest('dist/scripts/')
+
 gulp.task "images", ->
   gulp
     .src("app/images/**/*")
@@ -111,6 +117,7 @@ gulp.task "build", [
   "haml"
   "bundle"
   "images"
+  "jquery"
 ]
 
 gulp.task "default", ["connect","watch"], ->
@@ -146,7 +153,6 @@ gulp.task "watch", [
   "bundle"
   "connect"
 ], ->
-  livereload.listen()
   
   # Watch .html files
   gulp.watch "app/*.html", ["html"]

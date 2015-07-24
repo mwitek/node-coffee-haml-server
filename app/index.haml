@@ -1,0 +1,161 @@
+!!!
+/[if IE 9]
+  <html class="lt-ie10" lang="en" >
+%html.no-js{"data-useragent" => "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)", :lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %title Foundation Template | Marketing
+    %meta{:content => "Description of boilerplate markup", :name => "description"}
+    %meta{:content => "Just some zurb biolerplate", :name => "author"}
+    %meta{:content => "Basic template", :name => "copyright"}
+    %link{:href => "stylesheets/application.css", :rel => "stylesheet"}
+    %script{:src => "scripts/jquery.custom.js", :type => "text/javascript"}
+  %body
+    %nav.top-bar{"data-topbar" => ""}
+      %ul.title-area
+        %li.name
+          %h1
+            %a{:href => "#"}
+              Top Bar Title
+        %li.toggle-topbar.menu-icon
+          %a{:href => "#"}
+            %span menu
+      %section.top-bar-section
+        %ul.right
+          %li.divider
+          %li.has-dropdown
+            %a{:href => "#"} Main Item 1
+            %ul.dropdown
+              %li
+                %label Section Name
+              %li.has-dropdown
+                %a{:href => "#"} Has Dropdown, Level 1
+                %ul.dropdown
+                  %li
+                    %a{:href => "#"} Dropdown Options
+                  %li
+                    %a{:href => "#"} Dropdown Options
+                  %li
+                    %a{:href => "#"} Level 2
+                  %li
+                    %a{:href => "#"} Subdropdown Option
+                  %li
+                    %a{:href => "#"} Subdropdown Option
+                  %li
+                    %a{:href => "#"} Subdropdown Option
+              %li
+                %a{:href => "#"} Dropdown Option
+              %li
+                %a{:href => "#"} Dropdown Option
+              %li.divider
+              %li
+                %label Section Name
+              %li
+                %a{:href => "#"} Dropdown Option
+              %li
+                %a{:href => "#"} Dropdown Option
+              %li
+                %a{:href => "#"} Dropdown Option
+              %li.divider
+              %li
+                %a{:href => "#"} See all →
+          %li.divider
+          %li
+            %a{:href => "#"} Main Item 2
+          %li.divider
+          %li.has-dropdown
+            %a{:href => "#"} Main Item 3
+            %ul.dropdown
+              %li
+                %a{:href => "#"} Dropdown Option
+              %li
+                %a{:href => "#"} Dropdown Option
+              %li
+                %a{:href => "#"} Dropdown Option
+              %li.divider
+              %li
+                %a{:href => "#"} See all
+    .row
+      .large-12.columns
+        .row
+          .large-12.hide-for-small
+            #featured{"data-orbit" => ""}
+              %img{:alt => "slide image", :src => "http://placehold.it/1200x500&text=Slide Image 1"}
+              %img{:alt => "slide image", :src => "http://placehold.it/1200x500&text=Slide Image 2"}
+              %img{:alt => "slide image", :src => "http://placehold.it/1200x500&text=Slide Image 3"}
+        .row
+          .large-12.columns.show-for-small
+            %img{:src => "http://placehold.it/1200x700&text=Mobile Header"}
+        %br
+        .row
+          .large-12.columns
+            .row
+              .large-4.small-6.columns
+                %h4 Upcoming Shows
+                %hr
+                .row
+                  .large-1.column
+                    %img{:src => "http://placehold.it/50x50&text=[img]"}
+                  .large-9.columns
+                    %h5
+                      %a{:href => "#"} Venue Name
+                    %h6.subheader.show-for-small Doors at 00:00pm
+                %hr
+                .hide-for-small
+                  .row
+                    .large-1.column
+                      %img{:src => "http://placehold.it/50x50&text=[img]"}
+                    .large-9.columns
+                      %h5.subheader
+                        %a{:href => "#"} Venue Name
+                  %hr
+                  .row
+                    .large-1.column
+                      %img{:src => "http://placehold.it/50x50&text=[img]"}
+                    .large-9.columns
+                      %h5.subheader
+                        %a{:href => "#"} Venue Name
+                  %hr
+                  .row
+                    .large-1.column
+                      %img{:src => "http://placehold.it/50x50&text=[img]"}
+                    .large-9.columns
+                      %h5.subheader
+                        %a{:href => "#"} Venue Name
+              .large-4.small-6.columns
+                %img{:src => "http://placehold.it/300x465&text=Image"}
+              .large-4.small-12.columns
+                %h4 Blog
+                %hr
+                .panel
+                  %h5
+                    %a{:href => "#"} Post Title 1
+                  %h6.subheader
+                    Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Suspendisse ultrices ornare tempor...
+                  %h6
+                    %a{:href => "#"} Read More »
+                .panel.hide-for-small
+                  %h5
+                    %a{:href => "#"} Post Title 2 »
+                .panel.hide-for-small
+                  %h5
+                    %a{:href => "#"} Post Title 3 »
+                %a.right{:href => "#"} Go To Blog »
+        %footer.row
+          .large-12.columns
+            %hr/
+            .row
+              .large-6.columns
+                %p © Copyright no one at all. Go to town.
+              .large-6.small-12.columns
+                %ul.inline-list.right
+                  %li
+                    %a{:href => "#"} Link 1
+                  %li
+                    %a{:href => "#"} Link 2
+                  %li
+                    %a{:href => "#"} Link 3
+                  %li
+                    %a{:href => "#"} Link 4
+    %script{:src => "scripts/application.js", :type => "text/javascript"}

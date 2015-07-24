@@ -33,3 +33,4 @@ Browserify
 Haml
 Sass
 CoffeeScript
+Foundation
