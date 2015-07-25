@@ -93,13 +93,14 @@ class GulpBuilder
       .pipe @fileInclude
         prefix: '@@'
         basepath: '@file'
+        indent: true
       .pipe(@haml())
       .pipe(@gulp.dest("dist"))
       .on "error", @util.log
   
   compileImages: =>
     return @gulp
-      .src("app/images/**/*")
+      .src("app/images/*")
       .pipe(@gulp.dest("dist/images"))
       .pipe(@size())
   
