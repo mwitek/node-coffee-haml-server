@@ -31,7 +31,7 @@ default localhost url is http://localhost:5000
 * add template/ folder with foundation templates
 * make index view pop
 * create build command for generating new apps
-* add partial/template injection
+* ~~add partial/template injection~~
 * add test
 
 ....................................
