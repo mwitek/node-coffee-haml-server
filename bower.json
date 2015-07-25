@@ -2,7 +2,7 @@
   "name": "nodeCoffeeHamlServer",
   "version": "0.0.1",
   "dependencies": {
-    "jquery": "~2.1.0",
+    "jquery": "2.1.3",
     "underscore": "~1.6",
     "mousetrap": "~1.4.6",
     "modernizr": "~2.8.2",
