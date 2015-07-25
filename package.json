@@ -33,6 +33,7 @@
     "gulp-bower": "0.0.3",
     "gulp-bower-files": "^0.2.7",
     "gulp-browserify": "~0.4.6",
+    "gulp-file-include": "^0.13.7",
     "gulp-filter": "^2.0.2",
     "gulp-flatten": "^0.1.0",
     "gulp-haml-coffee": "git+ssh://git@github.com:saschagehlich/gulp-haml-coffee.git",

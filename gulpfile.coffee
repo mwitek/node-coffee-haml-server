@@ -5,6 +5,7 @@ class GulpBuilder
   
   constructor: ->
     @gulp = require("gulp")
+    @fileInclude = require('gulp-file-include')
     @sass = require('gulp-sass')
     @haml = require('gulp-haml-coffee')
     @livereload = require('gulp-livereload')
@@ -89,6 +90,9 @@ class GulpBuilder
   compileHAML: =>
     return @gulp
       .src("app/**/*.haml")
+      .pipe @fileInclude
+        prefix: '@@'
+        basepath: '@file'
       .pipe(@haml())
       .pipe(@gulp.dest("dist"))
       .on "error", @util.log
