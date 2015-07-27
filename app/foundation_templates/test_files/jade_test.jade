@@ -1,0 +1,11 @@
+html.no-js
+  link(href="../../stylesheets/application.css", rel="stylesheet")
+body
+  h1 Jade Compile Test File
+  
+  //testing vars and loops
+  - var books = {"books": ["A", "B", "C"]}
+  
+  select
+    each book, i in books.books
+      option(value=i) Book #{book}

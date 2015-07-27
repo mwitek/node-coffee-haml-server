@@ -1,12 +1,13 @@
 "use strict"
 
 class GulpBuilder
-  APP_ASSETS = ["html","haml","scripts","css","bower","images"]
+  APP_ASSETS = ["html","haml","scripts","css","bower","images", "jade"]
   
   constructor: ->
     @gulp = require("gulp")
     @fileInclude = require('gulp-file-include')
     @sass = require('gulp-sass')
+    @jade = require('gulp-jade')
     @haml = require('gulp-haml-coffee')
     @livereload = require('gulp-livereload')
     @browserify = require("gulp-browserify")
@@ -29,6 +30,7 @@ class GulpBuilder
     @gulp.task "haml", @compileHAML
     @gulp.task "images", @compileImages
     @gulp.task "connect", @connectToServer
+    @gulp.task "jade", @compileJade
     @gulp.task "watch", @watchGulpTask
     @gulp.task "build", APP_ASSETS
     
@@ -81,12 +83,23 @@ class GulpBuilder
   
   compileHTML: =>
     return @gulp
-      .src("app/*.html")
+      .src("app/**/*.html")
       .pipe(@useref())
       .pipe(@gulp.dest("dist"))
       .pipe(@size())
       .on "error", @util.log
-  
+
+  compileJade: =>
+    return @gulp
+      .src("app/**/*.jade")
+      .pipe @fileInclude
+        prefix: '@@'
+        basepath: '@file'
+        indent: true
+      .pipe(@jade())
+      .pipe(@gulp.dest("dist"))
+      .on "error", @util.log
+
   compileHAML: =>
     return @gulp
       .src("app/**/*.haml")
@@ -122,8 +135,9 @@ class GulpBuilder
       .pipe(@gulp.dest("dist/scripts/"))
 
   watchGulpTask: =>
-    @gulp.watch "app/*.html", ["html"]
+    @gulp.watch "app/**/*.html", ["html"]
     @gulp.watch "app/**/*.haml", ["haml"]
+    @gulp.watch "app/**/*.jade", ["jade"]
     @gulp.watch "app/scripts/**/*.coffee", ["scripts"]
     @gulp.watch "app/stylesheets/**/*.sass", ["css"]
     @gulp.watch "app/stylesheets/**/*.scss", ["css"]
