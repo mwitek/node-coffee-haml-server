@@ -39,6 +39,7 @@ default localhost url is http://localhost:5000
 Gulp
 Browserify
 Haml
+Jade
 Sass
 CoffeeScript
 Foundation
