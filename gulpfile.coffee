@@ -9,7 +9,6 @@ class GulpBuilder
     @sass = require('gulp-sass')
     @jade = require('gulp-jade')
     @haml = require('gulp-haml-coffee')
-    @livereload = require('gulp-livereload')
     @browserify = require("gulp-browserify")
     @rename = require("gulp-rename")
     @size = require("gulp-size")

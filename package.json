@@ -12,6 +12,7 @@
   "keywords": [
     "node",
     "haml",
+    "jade",
     "coffeeScript",
     "live-reload",
     "runtime compiling"
@@ -38,7 +39,6 @@
     "gulp-flatten": "^0.1.0",
     "gulp-haml-coffee": "0.0.6",
     "gulp-jade": "^1.0.1",
-    "gulp-livereload": "^3.8.0",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^0.7.3",
     "gulp-server-livereload": "^1.4.0",
